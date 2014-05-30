@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">mLearning</string>
+    <string name="title_mlearning">mLearning</string>
+    <string name="action_check_updates">Updates</string>
+
+    <!--Create Account-->
+    <string name="title_name">Name</string>
+    <string name="title_email">Email address</string>
+    <string name="title_password">Password</string>
+    <string name="title_confirm_password">Confirm password</string>
+    <string name="title_create_account">Create Account</string>
+    <string name="title_sign_in">Sign In</string>
+    <string name="title_sign_out">Sign out</string>
+
+    <!--Validation Message-->
+    <string name="msg_not_null">Please enter full information.</string>
+    <string name="msg_name_not_null">Please enter your name.</string>
+    <string name="msg_email_not_null">Please enter your email address.</string>
+    <string name="msg_email_not_valid">Please enter a valid email address.</string>
+    <string name="msg_pass_not_null">Please enter your password.</string>
+
+    <!--Verify Message-->
+    <string name="msg_user_create">New user have been created.</string>
+    <string name="msg_user_not_create">Please try to chose another name or email.</string>
+    <string name="msg_user_pass_invalid">There is no user by this information. Please try again!</string>
+
+</resources>

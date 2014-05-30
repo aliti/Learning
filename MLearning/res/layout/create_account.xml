@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtName"
+            android:hint="@string/title_name"/>
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtEmail"
+            android:layout_gravity="center"
+            android:hint="@string/title_email"
+            android:inputType="textWebEmailAddress"/>
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPAss"
+            android:layout_gravity="center"
+            android:inputType="textPassword"
+            android:hint="@string/title_password"/>
+<!--
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPassConfirm"
+            android:hint="@string/title_confirm_password"
+            android:inputType="textPassword"/>
+-->
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_create_account"
+            android:id="@+id/btnCreateAccount"
+            android:layout_gravity="left|center_vertical" />
+</LinearLayout>
