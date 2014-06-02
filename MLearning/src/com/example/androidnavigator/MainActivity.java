@@ -11,9 +11,10 @@ import com.example.androidnavigator.utils.SessionManager;
 
 public class MainActivity extends FragmentActivity {
     private static String TAG = "MainActivity-----";
-    SwipeFragmentAdapter mAdapter;
-    ViewPager mPager;
-    PageIndicator mIndicator;
+    private SwipeFragmentAdapter mAdapter;
+    private ViewPager mPager;
+    private PageIndicator mIndicator;
+    private static int pageIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +34,13 @@ public class MainActivity extends FragmentActivity {
         mIndicator = (LinePageIndicator) findViewById(R.id.indicator);
         mIndicator.setViewPager(mPager);
 
+        mIndicator.setCurrentItem(pageIndex); //mAdapter.getCount() - 1
+
     }
 
     @Override
-    public void onSaveInstanceState(Bundle state) {
-        super.onSaveInstanceState(state);
-        state.putString("saved_thing", "some_value");
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        pageIndex = 3;
     }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        Log.i(TAG, "onRestoreInstanceState() : " + savedInstanceState.getString("saved_thing"));
-    }
-
 }

@@ -1,0 +1,9 @@
+
+
+*.class
+
+MLearning/bin/jarlist.cache
+
+*.apk
+
+MLearning/bin/AndroidManifest.xml

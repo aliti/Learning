@@ -7,8 +7,11 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.GridLayout;
+import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.TextView;
 
 public final class SwipeFragment extends Fragment {
     private int position = 0;
@@ -23,13 +26,8 @@ public final class SwipeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRetainInstance(true);
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle state) {
-        super.onSaveInstanceState(state);
-        state.putString("saved_thing", "some_value");
+        //http://stackoverflow.com/questions/7836250/saving-ui-on-orientation-change-onsaveinstancestate-not-working-as-expected-if/8488107#8488107
+        //setRetainInstance(true);
     }
 
     @Override
@@ -74,7 +72,6 @@ public final class SwipeFragment extends Fragment {
                 public void onClick(View view) {
                     Intent createAccountIntent = new Intent(getActivity(), CreateAccountActivity.class);
                     startActivity(createAccountIntent);
-                    getActivity().finish();
                 }
             });
 
@@ -83,11 +80,9 @@ public final class SwipeFragment extends Fragment {
                 public void onClick(View view) {
                     Intent signInIntent = new Intent(getActivity(), SignInActivity.class);
                     startActivity(signInIntent);
-                    getActivity().finish();
                 }
             });
         }
-
 
         return layout;
     }

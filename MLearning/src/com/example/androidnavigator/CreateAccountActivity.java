@@ -103,13 +103,6 @@ public class CreateAccountActivity extends Activity {
                     Toast.makeText(getApplicationContext(), R.string.msg_user_not_create, Toast.LENGTH_LONG).show();
 
 
-                //todo: (aliti-930229) this block is for check only; you can remove it
-                List<UserModel> users = db.getAllUsers();
-                for (UserModel user : users) {
-                    String log = "Id: " + user.getId() + " ,Name: " + user.getName() + " ,Email: " + user.getEmail();
-                    Log.d(TAG, log);
-                }
-
             }
 
 
